@@ -1,0 +1,245 @@
+:root {
+    --primary-color: #10b981;
+    /* 翠绿色 - 开始 */
+    --pause-color: #f59e0b;
+    /* 琥珀色 - 暂停 */
+    --reset-color: #f43f5e;
+    /* 玫瑰红 - 重置 */
+    --bg-color: #f9fafb;
+    /* 浅灰白背景 */
+    --text-main: #111827;
+    /* 深色文字 */
+    --text-secondary: #4b5563;
+    /* 次要文字 */
+    --card-bg: #ffffff;
+    /* 白色显眼卡片 */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 8px;
+}
+
+#statusIndicator {
+    display: inline-block;
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.status-ready {
+    background: #e5e7eb;
+    color: #4b5563;
+}
+
+.status-active {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-rest {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.display-container {
+    background: var(--card-bg);
+    border-radius: 32px;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    border: 4px solid #e5e7eb;
+    position: relative;
+    overflow: hidden;
+}
+
+.count-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    display: none;
+    /* 默认隐藏，开始后显示 */
+}
+
+.overlay-label {
+    font-size: 24px;
+    color: var(--text-secondary);
+    font-weight: bold;
+}
+
+.huge-number {
+    font-size: 160px;
+    font-weight: 900;
+    color: var(--primary-color);
+    line-height: 1;
+}
+
+.overlay-hint {
+    font-size: 18px;
+    color: #9ca3af;
+}
+
+.label {
+    font-size: 22px;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.main-number {
+    font-size: 100px;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--text-main);
+    margin-bottom: 20px;
+}
+
+.timer-section {
+    border-top: 2px solid #f3f4f6;
+    padding-top: 20px;
+}
+
+.timer-number {
+    font-size: 140px;
+    font-weight: 900;
+    line-height: 0.9;
+    color: var(--primary-color);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.info-item {
+    background: white;
+    padding: 20px;
+    border-radius: 24px;
+    text-align: center;
+    border: 3px solid #f3f4f6;
+}
+
+.info-label {
+    font-size: 18px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.info-value {
+    font-size: 36px;
+    font-weight: 800;
+}
+
+footer {
+    padding-bottom: 20px;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.btn {
+    width: 100%;
+    padding: 24px;
+    font-size: 28px;
+    font-weight: 800;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.1s;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+    transform: scale(0.96);
+}
+
+.btn-start {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn-pause {
+    background: var(--pause-color);
+    color: white;
+}
+
+.btn-reset {
+    background: var(--reset-color);
+    color: white;
+}
+
+/* 响应式调整 */
+@media (max-height: 700px) {
+    .main-number {
+        font-size: 80px;
+    }
+
+    .timer-number {
+        font-size: 100px;
+    }
+
+    .btn {
+        padding: 18px;
+        font-size: 24px;
+    }
+
+    .app-container {
+        padding: 16px;
+    }
+}

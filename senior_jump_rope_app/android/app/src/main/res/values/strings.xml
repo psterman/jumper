@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">JumpRopeSenior</string>
+    <string name="title_activity_main">JumpRopeSenior</string>
+    <string name="package_name">com.example.jumpropesenior</string>
+    <string name="custom_url_scheme">com.example.jumpropesenior</string>
+</resources>

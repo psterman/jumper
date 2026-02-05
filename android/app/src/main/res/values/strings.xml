@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Jump Rope Timer</string>
+    <string name="title_activity_main">Jump Rope Timer</string>
+    <string name="package_name">com.pster.jumpropetimer</string>
+    <string name="custom_url_scheme">com.pster.jumpropetimer</string>
+</resources>

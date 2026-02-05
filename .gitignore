@@ -1,0 +1,8 @@
+# 忽略 Android Studio 配置文件
+.idea/
+*.iml
+# 忽略安卓构建产物
+android/build/
+android/app/build/
+# 忽略本地属性文件
+local.properties

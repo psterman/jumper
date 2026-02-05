@@ -1,0 +1,8 @@
+{
+  "appId": "com.pster.jumpropetimer",
+  "appName": "Jump Rope Timer",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  }
+}

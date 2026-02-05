@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>乐龄跳绳助手</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <h1 id="appTitle">乐龄跳绳助手</h1>
+            <div id="statusIndicator" class="status-ready">准备就绪</div>
+        </header>
+
+        <main>
+            <div id="tapArea" class="display-container">
+                <div class="label">当前组数</div>
+                <div id="groupDisplay" class="main-number">01</div>
+
+                <div class="timer-section">
+                    <div class="label" id="timerLabel">倒计时 (秒)</div>
+                    <div id="timerDisplay" class="timer-number">60</div>
+                </div>
+
+                <div id="countOverlay" class="count-overlay">
+                    <div class="overlay-label">点击屏幕记录一次</div>
+                    <div id="jumpCountDisplay" class="huge-number">0</div>
+                    <div class="overlay-hint">每跳一个点一下</div>
+                </div>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-label">本组累计</div>
+                    <div id="countDisplay" class="info-value">0</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">今日目标</div>
+                    <div class="info-value">4组</div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="controls">
+                <button id="startBtn" class="btn btn-start">开始锻炼</button>
+                <button id="pauseBtn" class="btn btn-pause" style="display: none;">暂停</button>
+                <button id="resetBtn" class="btn btn-reset">重置</button>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 语音提示音效 -->
+    <audio id="beepSound"
+        src="data:audio/wav;base64,UklGRl9vT19XQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YTlvT19vT19vT19vT19vT19vT19vT19vT19vT19vT19vT19vT19vT19vT19vT19vT19vT19vT19vT19vT19vT19vT19vT19vT19vT19vT19vT19vT19vT19vT19vT19vT19vT19vT19vT19vT19v"></audio>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
